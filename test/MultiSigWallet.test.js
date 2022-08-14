@@ -43,6 +43,7 @@ contract("MultiSigWallet", (accounts) => {
 
  
 
+      
       await expect(wallet.executeTransaction(0, { from: owners[0] })).to.be
         .rejected
     })
