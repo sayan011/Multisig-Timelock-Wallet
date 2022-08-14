@@ -38,18 +38,10 @@ contract("MultiSigWallet", (accounts) => {
       assert.equal(tx.executed, true)
     })
 
-    // execute transaction should fail if already executed
     it("should reject if already executed", async () => {
       await wallet.executeTransaction(0, { from: owners[0] })
 
-      /*
-      try {
-        await wallet.executeTransaction(0, { from: owners[0] })
-        throw new Error("tx did not fail")
-      } catch (error) {
-        assert.equal(error.reason, "tx already executed")
-      }
-      */
+ 
 
       await expect(wallet.executeTransaction(0, { from: owners[0] })).to.be
         .rejected
