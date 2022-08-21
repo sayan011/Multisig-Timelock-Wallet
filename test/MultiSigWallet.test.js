@@ -3,6 +3,7 @@ chai.use(require("chai-as-promised"))
 
 const expect = chai.expect
 
+
 const MultiSigWallet = artifacts.require("MultiSigWallet")
 
 contract("MultiSigWallet", (accounts) => {
