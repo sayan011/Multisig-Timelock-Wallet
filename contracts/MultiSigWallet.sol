@@ -8,6 +8,7 @@ contract MultiSigWallet {
     event Approve(address indexed owner, uint indexed txId);
     event Revoke(address indexed owner, uint indexed txId);
     event Execute(uint indexed txId);
+    
 
     struct Transaction {
         address to;
