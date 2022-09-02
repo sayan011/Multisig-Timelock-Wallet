@@ -10,6 +10,7 @@ contract MultiSigWalletFactory {
         MultiSigWallet newWallet = new MultiSigWallet(addresses, _required, _timelock);
         deployedMultiSig.push(newWallet);
     }
+    
 
     function returnAllWallets() external view returns(MultiSigWallet[] memory){
         return deployedMultiSig;
